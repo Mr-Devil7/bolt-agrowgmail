@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, Facebook, Instagram, MessageCircle, Users } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (section: string) => void;
@@ -36,10 +36,26 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com/agrow', label: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com/agrow', label: 'Twitter' },
-    { icon: Instagram, href: 'https://instagram.com/agrow', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/agrow', label: 'LinkedIn' }
+    { 
+      icon: Facebook, 
+      href: 'https://www.facebook.com/profile.php?id=61575954306775', 
+      label: 'Facebook Page' 
+    },
+    { 
+      icon: Users, 
+      href: 'https://www.facebook.com/groups/agrowcommunity', 
+      label: 'Facebook Community' 
+    },
+    { 
+      icon: Instagram, 
+      href: 'https://www.instagram.com/agrow.official/', 
+      label: 'Instagram' 
+    },
+    { 
+      icon: MessageCircle, 
+      href: 'https://chat.whatsapp.com/IaJoBCwAkCTBHBSjintHSl', 
+      label: 'WhatsApp Community' 
+    }
   ];
 
   return (
@@ -67,22 +83,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
-              Revolutionizing agriculture through innovative technology solutions. 
-              Empowering farmers worldwide with smart, sustainable, and efficient farming tools.
+              Agrow is your one-stop app for seeds, fertilizers, plants, weather updates, and more, empowering Indian farmers to grow smarter. Join our community today! 🌾
             </p>
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent" />
-                <span className="text-white/80">info@agrow.com</span>
+                <span className="text-white/80">contact.agrow@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
-                <span className="text-white/80">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-accent" />
-                <span className="text-white/80">123 Agriculture Tech Blvd, Farm City, FC 12345</span>
+                <span className="text-white/80">+91 89049 59058</span>
               </div>
             </div>
           </div>
@@ -159,7 +170,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 © {currentYear} Agrow. All rights reserved.
               </p>
               <p className="text-white/40 text-sm mt-1">
-                Registered trademark of Agrow Technologies Inc.
+                Registered trademark of Agrow
               </p>
             </div>
           </div>

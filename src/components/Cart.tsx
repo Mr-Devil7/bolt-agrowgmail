@@ -23,7 +23,7 @@ const Cart: React.FC = () => {
     const total = getTotalPrice().toFixed(2);
     const message = `Hi Agrow! I'd like to place an order:\n\n${orderDetails}\n\nTotal: $${total}\n\nPlease confirm availability and payment details.`;
     
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/918904959058?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
     clearCart();

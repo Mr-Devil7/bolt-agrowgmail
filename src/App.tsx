@@ -40,7 +40,6 @@ function App() {
             <Offerings onNavigate={handleNavigate} />
             <Mission />
             <Testimonials />
-            <Contact />
           </>
         );
     }

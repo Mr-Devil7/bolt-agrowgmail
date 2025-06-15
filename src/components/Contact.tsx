@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MessageCircle, Send, Users, Facebook } from 'lucide-react';
 import { ContactForm } from '../types';
 
 const Contact: React.FC = () => {
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
     
     // Send to WhatsApp
     const message = `New Contact Form Submission:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/918904959058?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
     setIsSubmitting(false);
@@ -43,20 +43,44 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      action: 'tel:+15551234567'
+      value: '+91 89049 59058',
+      action: 'tel:+918904959058'
     },
     {
       icon: Mail,
       title: 'Email',
-      value: 'info@agrow.com',
-      action: 'mailto:info@agrow.com'
+      value: 'contact.agrow@gmail.com',
+      action: 'mailto:contact.agrow@gmail.com'
     },
     {
-      icon: MapPin,
-      title: 'Address',
-      value: '123 Agriculture Tech Blvd, Farm City, FC 12345',
-      action: '#'
+      icon: MessageCircle,
+      title: 'WhatsApp Community',
+      value: 'Join our farming community',
+      action: 'https://chat.whatsapp.com/IaJoBCwAkCTBHBSjintHSl'
+    }
+  ];
+
+  const socialLinks = [
+    {
+      icon: MessageCircle,
+      title: 'WhatsApp Support',
+      description: 'Get instant support and connect with our team',
+      action: () => window.open('https://wa.me/918904959058', '_blank'),
+      color: 'bg-green-500'
+    },
+    {
+      icon: Facebook,
+      title: 'Facebook Page',
+      description: 'Follow us for updates and farming tips',
+      action: () => window.open('https://www.facebook.com/profile.php?id=61575954306775', '_blank'),
+      color: 'bg-blue-600'
+    },
+    {
+      icon: Users,
+      title: 'Facebook Community',
+      description: 'Join our farming community group',
+      action: () => window.open('https://www.facebook.com/groups/agrowcommunity', '_blank'),
+      color: 'bg-blue-500'
     }
   ];
 
@@ -66,7 +90,7 @@ const Contact: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">Get in Touch</h2>
           <p className="text-xl text-text/70 max-w-3xl mx-auto">
-            Ready to transform your agricultural operations? Contact our team of experts 
+            Ready to transform your farming operations? Contact our team of experts 
             to discuss your needs and find the perfect solution for your farm.
           </p>
         </div>
@@ -81,6 +105,8 @@ const Contact: React.FC = () => {
                   <a
                     key={index}
                     href={info.action}
+                    target={info.title === 'WhatsApp Community' ? '_blank' : undefined}
+                    rel={info.title === 'WhatsApp Community' ? 'noopener noreferrer' : undefined}
                     className="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100"
                   >
                     <div className="bg-accent/20 p-3 rounded-lg mr-4">
@@ -95,6 +121,28 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
+            {/* Social Media Links */}
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-6">Connect With Us</h3>
+              <div className="space-y-4">
+                {socialLinks.map((social, index) => (
+                  <div
+                    key={index}
+                    onClick={social.action}
+                    className="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer border border-gray-100 hover:border-primary/20"
+                  >
+                    <div className={`${social.color} p-3 rounded-lg mr-4`}>
+                      <social.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-primary">{social.title}</h4>
+                      <p className="text-text/70 text-sm">{social.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="bg-primary text-white p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-4">Quick Support</h3>
               <p className="text-white/90 mb-6">
@@ -102,7 +150,7 @@ const Contact: React.FC = () => {
                 quick support and real-time communication with our team.
               </p>
               <button
-                onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+                onClick={() => window.open('https://wa.me/918904959058', '_blank')}
                 className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-accent/20 transition-colors flex items-center space-x-2"
               >
                 <MessageCircle className="h-5 w-5" />
