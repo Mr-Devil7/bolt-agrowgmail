@@ -63,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/Hero.jpeg"
                 alt="Modern Indian Agriculture"
                 className="rounded-2xl shadow-2xl"
               />

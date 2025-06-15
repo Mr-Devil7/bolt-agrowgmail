@@ -1,27 +1,27 @@
 import React from 'react';
-import { Leaf, Droplet, Sun, Shield } from 'lucide-react';
+import { Users, Shield, Smartphone, TrendingUp } from 'lucide-react';
 
 const Mission: React.FC = () => {
   const values = [
     {
-      icon: Leaf,
-      title: 'Sustainability',
-      description: 'Promoting eco-friendly farming practices that preserve our environment for future generations.'
+      icon: Users,
+      title: 'Supporting Small Farmers',
+      description: 'Dedicated to transforming the lives of India\'s small and marginal farmers through accessible technology.'
     },
     {
-      icon: Droplet,
-      title: 'Water Conservation',
-      description: 'Developing smart irrigation systems that optimize water usage and reduce waste.'
-    },
-    {
-      icon: Sun,
-      title: 'Renewable Energy',
-      description: 'Integrating solar and other renewable energy sources into agricultural operations.'
+      icon: Smartphone,
+      title: 'Easy Access',
+      description: 'Simple-to-use website and WhatsApp marketplace that makes farming information and supplies easily accessible.'
     },
     {
       icon: Shield,
-      title: 'Food Security',
-      description: 'Ensuring reliable food production through innovative farming technologies.'
+      title: 'Trusted Partnership',
+      description: 'Your reliable partner every step of the way, from sowing season to harvest management.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Smart Growth',
+      description: 'Helping farmers grow smarter with data-driven insights and quality products at fair prices.'
     }
   ];
 
@@ -31,38 +31,32 @@ const Mission: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">Our Mission</h2>
           <p className="text-xl text-text/70 max-w-3xl mx-auto">
-            To revolutionize agriculture through innovative technology solutions that promote 
-            sustainability, efficiency, and food security for a better tomorrow.
+            Transforming agriculture by making farming simpler, smarter, and more profitable for every farmer across India.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-primary">
-              Building a Sustainable Future
+              Your Trusted Farming Partner
             </h3>
             <p className="text-text/70 leading-relaxed">
-              At Agrow, we envision a world where technology and nature work in harmony to create 
-              sustainable agricultural systems. Our mission is to develop and deploy innovative 
-              solutions that help farmers increase productivity while minimizing environmental impact.
+              At Agrow, we're dedicated to transforming the lives of India's small and marginal farmers by making farming simpler, smarter, and more profitable. Our easy-to-use platform provides essential farming information and real-time weather updates to help you plan your crops with confidence.
             </p>
             <p className="text-text/70 leading-relaxed">
-              We're committed to making advanced agricultural technology accessible to farmers 
-              worldwide, from small-scale operations to large commercial farms. Together, we're 
-              building a more sustainable and food-secure future for all.
+              Through our WhatsApp marketplace, you can directly purchase high-quality seeds, fertilizers, and plants at fair prices, saving time and ensuring you get the best for your farm. Whether you're preparing for the sowing season or managing your harvest, Agrow is with you every step of the way.
             </p>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-primary/20">
-              <h4 className="font-bold text-primary mb-2">Our Impact</h4>
+              <h4 className="font-bold text-primary mb-2">Join Our Community</h4>
               <p className="text-text/70">
-                Over 30% reduction in water usage and 25% increase in crop yields across 
-                partner farms implementing our technology solutions.
+                Join thousands of farmers who are growing smarter with Agrow. Connect with us today and discover how we can help transform your farming journey.
               </p>
             </div>
           </div>
           <div>
             <img
-              src="https://images.pexels.com/photos/2889664/pexels-photo-2889664.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Sustainable Agriculture"
+              src="/Mission.jpg"
+              alt="Farmers Growing with Agrow"
               className="rounded-2xl shadow-lg"
             />
           </div>
